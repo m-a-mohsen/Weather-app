@@ -4,12 +4,22 @@ export function Form({ onAddActivity }) {
 // export function Form({ onAddActivity }) {
   function handleSubmit(event) {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
+    // const formData = new FormData(event.target);
+    const form = event.target
+    // const data = Object.fromEntries(formData);
     
-    // onAddActivity(data);
-    event.taget.reset()
-    console.log(data);
+    onAddActivity({
+      name: form.elements.name.value,
+      isForGoodWeather: form.elements.isForGoodWeather.checked
+    });
+   
+    
+    // console.log(form.elements.name.value);
+    // console.log(form.elements.isForGoodWeather.checked);
+
+    event.target.reset()
+    event.target.elements.name.focus()
+    // console.log(event.target.elements);
   }
   
 
@@ -21,7 +31,7 @@ export function Form({ onAddActivity }) {
       </label>
       <hr />
       <label>
-        Is the Weather Good? <input type='checkbox' name='isForGood' />
+        Is the Weather Good? <input type='checkbox' name='isForGoodWeather' />
       </label>
       <hr />
       <button type='submit'>test</button>
