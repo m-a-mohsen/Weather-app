@@ -1,5 +1,5 @@
 export function FormButton({ onAddActivity }) {
   <>
-    <button>Submit Button </button>
+    <button type="submit" >Submit Button </button>
   </>;
 }
