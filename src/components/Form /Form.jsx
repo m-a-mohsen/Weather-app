@@ -6,7 +6,7 @@ export function Form({ onAddActivity }) {
     event.preventDefault();
 
     const form = event.target;
-    console.log(form);
+    // console.log(form);
     onAddActivity({
       name: form.elements.name.value,
       isForGoodWeather: form.elements.isForGoodWeather.checked,
