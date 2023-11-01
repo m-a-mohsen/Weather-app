@@ -1,7 +1,8 @@
-export function List({ activities }) {
+/* eslint-disable react/prop-types */
+export function List({ list }) {
   return (
     <ul>
-      {activities.map((element) => (
+      {list.map((element) => (
         <li key={element.id}>{element.name}</li>
       ))}
     </ul>
