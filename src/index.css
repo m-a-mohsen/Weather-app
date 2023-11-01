@@ -14,6 +14,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  background-image: url("https://onetreeplanted.org/cdn/shop/articles/amazon_rainforest_mist_1350x.png?v=1680706265");
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -36,6 +42,19 @@ h1 {
   line-height: 1.1;
 }
 
+li {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Semi-transparent white background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Padding inside the container */
+  margin: 20px; /* Margin around the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  list-style: none;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
