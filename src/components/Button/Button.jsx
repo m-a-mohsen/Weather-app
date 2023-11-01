@@ -1,5 +1,3 @@
-export function FormButton({ onAddActivity }) {
-  <>
-    <button type="submit" >Submit Button </button>
-  </>;
+export function FormButton() {
+  return <button type="submit">Submit Button </button>;
 }
