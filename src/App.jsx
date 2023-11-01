@@ -30,7 +30,10 @@ function App() {
     // console.log([...activities, { ...newActivity, id: uid() }]);
     setActivity([...activities, { ...newActivity, id: uid() }]);
   }
-
+  function handleDeleteActivity(id) {
+  const listAfterDelete = activities.filter((element)=> element.id !== id)
+  setWeatherData(listAfterDelete)
+}
   // ------ Filtering Activities List -----------
   const isGoodWeather = false;
   const filteredActivities = activities.filter(
@@ -42,7 +45,7 @@ function App() {
       <WeatherHeader box={weatherData} />
       <h1> {isGoodWeather ? 'Good Weather' : 'Bad Weather'}</h1>
 
-      <List list={filteredActivities} />
+      <List list={filteredActivities} onDeleteActivity={handleDeleteActivity}/>
       <Form onAddActivity={handleAddActivity} />
     </>
   );
