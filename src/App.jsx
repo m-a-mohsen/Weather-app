@@ -31,8 +31,9 @@ function App() {
     setActivity([...activities, { ...newActivity, id: uid() }]);
   }
   function handleDeleteActivity(id) {
-  const listAfterDelete = activities.filter((element)=> element.id !== id)
-  setWeatherData(listAfterDelete)
+    const listAfterDelete = activities.filter((element) => element.id !== id)
+    console.log('new list', listAfterDelete)
+  setActivity(listAfterDelete)
 }
   // ------ Filtering Activities List -----------
   const isGoodWeather = false;

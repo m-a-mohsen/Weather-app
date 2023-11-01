@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
-export function List({ list, onDeleteActivity, id }) {
+export function List({ list, onDeleteActivity }) {
+  console.log(list)
   return (
     <ul>
       {list.map((element) => (
         <>
           <li key={element.id}>
             {element.name}
-            <button onClick={()=>onDeleteActivity(id)}>x</button>
+            <button key={element.id} onClick={() => onDeleteActivity(element.id)}>
+              x
+            </button>
           </li>
         </>
       ))}
