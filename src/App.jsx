@@ -1,22 +1,22 @@
-import './App.css';
-import { Form } from './components/Form /Form';
-import { uid } from 'uid';
-import { List } from './components/List/List';
-import useLocalStorageState from 'use-local-storage-state';
-import { useEffect, useState } from 'react';
-import { WeatherHeader } from './components/WeatherHeader/WeatherHeader';
+import "./App.css";
+import { Form } from "./components/Form /Form";
+import { uid } from "uid";
+import { List } from "./components/List/List";
+import useLocalStorageState from "use-local-storage-state";
+import { useEffect, useState } from "react";
+import { WeatherHeader } from "./components/WeatherHeader/WeatherHeader";
 
 function App() {
   // -------------- UI States ------------------------
-  const [activities, setActivity] = useLocalStorageState('activities', {
+  const [activities, setActivity] = useLocalStorageState("activities", {
     defaultValue: [],
   });
-  const [weatherData, setWeatherData] = useLocalStorageState('Weather Data', {
+  const [weatherData, setWeatherData] = useLocalStorageState("Weather Data", {
     defaultValue: {},
   });
   const [fetchInterval, setFetchInterval] = useState(null);
   // ------------- Fetching -------------------------------
-  let url = 'https://example-apis.vercel.app/api/weather/sahara';
+  let url = "https://example-apis.vercel.app/api/weather/sahara";
   useEffect(() => {
     async function fetchWeather() {
       const res = await fetch(url);
@@ -28,14 +28,13 @@ function App() {
     fetchWeather();
 
     const intervalID = setInterval(fetchWeather, 5000);
-    setFetchInterval(intervalID)
+    setFetchInterval(intervalID);
     // cleanup function
     return () => {
       if (fetchInterval) {
-        clearInterval(fetchInterval)
+        clearInterval(fetchInterval);
       }
-    }
-
+    };
   }, []);
   // ------------ Handling events ----------------------------
   function handleAddActivity(newActivity) {
@@ -43,9 +42,9 @@ function App() {
     setActivity([...activities, { ...newActivity, id: uid() }]);
   }
   function handleDeleteActivity(id) {
-    console.log('id', id);
+    console.log("id", id);
     const listAfterDelete = activities.filter((element) => element.id !== id);
-    console.log('new list', listAfterDelete);
+    console.log("new list", listAfterDelete);
     setActivity(listAfterDelete);
   }
   // ------ Filtering Activities List -----------
@@ -57,7 +56,7 @@ function App() {
   return (
     <>
       <WeatherHeader box={weatherData} />
-      <h1> {isGoodWeather ? 'Good Weather' : 'Bad Weather'}</h1>
+      <h1> {isGoodWeather ? "Good Weather" : "Bad Weather"}</h1>
 
       <List list={filteredActivities} onDeleteActivity={handleDeleteActivity} />
       <Form onAddActivity={handleAddActivity} />

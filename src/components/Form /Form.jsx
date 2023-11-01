@@ -20,7 +20,7 @@ export function Form({ onAddActivity }) {
     <form className="form" onSubmit={handleSubmit}>
       <h2>Add A New Activity</h2>
       <label>
-        Name of the Activity? <input name="name" />
+        What should you do? <input name="name" />
       </label>
       <hr />
       <label>
