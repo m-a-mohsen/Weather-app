@@ -18,11 +18,11 @@ function App() {
   const [fetchInterval, setFetchInterval] = useState(null);
 
   const [backgroundImage, setBackgroundImage] = useState(
-    "https://cdn.britannica.com/10/152310-050-5A09D74A/Sand-dunes-Sahara-Morocco-Merzouga.jpg"
+    'https://onetreeplanted.org/cdn/shop/articles/amazon_rainforest_mist_1350x.png?v=1680706265'
   );
 
   const [apiUrl, setApiUrl] = useState(
-    "https://example-apis.vercel.app/api/weather/sahara"
+    "https://example-apis.vercel.app/api/weather/rainforest"
   );
 
   const handleLocationChange = (newLocation) => {

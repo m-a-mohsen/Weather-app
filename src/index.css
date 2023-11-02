@@ -25,7 +25,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 100vw;
   height: 100vh; /* Adjust the height as needed */
   position: relative;
 }
@@ -61,9 +61,11 @@ li {
   ); /* Semi-transparent white background */
   border-radius: 15px; /* Rounded corners */
   padding: 20px; /* Padding inside the container */
-  margin: 20px; /* Margin around the container */
+  margin: 20px auto; /* Margin around the container */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   list-style: none;
+  max-width: 400px;
+  /* margin: auto; */
 }
 button {
   border-radius: 8px;

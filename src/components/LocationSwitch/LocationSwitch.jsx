@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export function LocationSelector({ onLocationChange }) {
-  const [selectedLocation, setSelectedLocation] = useState("sahara");
+  const [selectedLocation, setSelectedLocation] = useState("rainforest");
 
   const handleLocationChange = (event) => {
     const newLocation = event.target.value;
@@ -14,11 +14,11 @@ export function LocationSelector({ onLocationChange }) {
     <div>
       <label>Select Location: </label>
       <select value={selectedLocation} onChange={handleLocationChange}>
-        <option className="sahara" value="sahara">
-          Sahara
-        </option>
         <option className="rainforest" value="rainforest">
           Rainforest
+        </option>
+        <option className="sahara" value="sahara">
+          Sahara
         </option>
         <option className="europe" value="europe">
           Europe
