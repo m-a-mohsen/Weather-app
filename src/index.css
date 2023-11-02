@@ -14,10 +14,20 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+/* body {
   background-image: url("https://onetreeplanted.org/cdn/shop/articles/amazon_rainforest_mist_1350x.png?v=1680706265");
   background-size: cover; /* Adjust as needed */
+/* background-repeat: no-repeat;
+} */
+
+.background-container {
+  background-image: url("https://cdn.britannica.com/10/152310-050-5A09D74A/Sand-dunes-Sahara-Morocco-Merzouga.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh; /* Adjust the height as needed */
+  position: relative;
 }
 
 a {
@@ -51,9 +61,11 @@ li {
   ); /* Semi-transparent white background */
   border-radius: 15px; /* Rounded corners */
   padding: 20px; /* Padding inside the container */
-  margin: 20px; /* Margin around the container */
+  margin: 20px auto; /* Margin around the container */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   list-style: none;
+  max-width: 400px;
+  /* margin: auto; */
 }
 button {
   border-radius: 8px;
