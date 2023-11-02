@@ -21,8 +21,11 @@ function App() {
     'https://onetreeplanted.org/cdn/shop/articles/amazon_rainforest_mist_1350x.png?v=1680706265'
   );
 
-  const [apiUrl, setApiUrl] = useState(
-    "https://example-apis.vercel.app/api/weather/rainforest"
+  // const [apiUrl, setApiUrl] = useState(
+  //   "https://example-apis.vercel.app/api/weather/rainforest"
+  // );
+  const [apiUrl, setApiUrl] = useLocalStorageState('api',{defaultValue:'https://example-apis.vercel.app/api/weather/rainforest'}
+    
   );
 
   const handleLocationChange = (newLocation) => {
